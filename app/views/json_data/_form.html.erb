@@ -1,0 +1,21 @@
+<%= form_for(@json_datum) do |f| %>
+  <% if @json_datum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@json_datum.errors.count, "error") %> prohibited this json_datum from being saved:</h2>
+
+      <ul>
+      <% @json_datum.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :json_blob %><br>
+    <%= f.text_area :json_blob %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

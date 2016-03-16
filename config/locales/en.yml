@@ -21,3 +21,6 @@
 
 en:
   hello: "Hello world"
+  errors: 
+    not_found: "There's nothing here"
+    invalid_json_blob: "Invalid json data"

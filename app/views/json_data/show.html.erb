@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Endpoint:</strong>
+  <%= @json_datum.endpoint %>
+</p>
+
+<p>
+  <strong>Data:</strong>
+  <%= @json_datum.json_blob.html_safe %>
+</p>
+
+<p>
+  <strong>Last accessed:</strong>
+  <%= @json_datum.last_accessed %>
+</p>
+
+<%= link_to 'Edit', edit_json_datum_path(@json_datum) %> |
+<%= link_to 'Back', json_data_path %>
